@@ -44,7 +44,9 @@ El objetivo de esta práctica es realizar la construción de un cable UTP de par
 <br>
 Pelamos el cable lo ordenamos en los colores correspondientes y luego lo cortamos para meterlo dentro del la boca
 ![](Directo.jpg)
-
+Asi quedaria el cable una vez pelado y metido en el RJ45
+![](Cruzado.jpg)
+Y luego repetimos lo realizado anteriormente en el otro extremo del cable
 ***IMPORTANTE:*** si estamos capturando una terminal no hace falta capturar todo el escritorio y es importante que se vea el nombre de usuario.
 
 Si encontramos dificultades a la hora de realizar algún paso debemos explicar esas dificultades, que pasos hemos seguido para resolverla y los resultados obtenidos.
