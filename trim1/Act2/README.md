@@ -40,7 +40,8 @@ El objetivo de esta práctica es realizar la construción de un cable UTP de par
 ![](pela.jpg) 
 
 #### ***Desarrollo***. <a name="id4"></a>
-*Cable Cruzado*
+**Cable Cruzado**
+<br>
 Pelamos el cable lo ordenamos en los colores correspondientes y luego lo cortamos para meterlo dentro del la boca
 ![](Directo.jpg)
 
