@@ -29,7 +29,7 @@ El objetivo de esta práctica es realizar la construción de un cable UTP de par
 #### ***Material empleado***. <a name="id3"></a>
 
 - Crimpadora
-![]()
+![Crimpadora]()
 - Tijeras
 - Tester para Comprobar cables
 - Cableado
