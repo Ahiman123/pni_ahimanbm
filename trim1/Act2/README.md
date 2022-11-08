@@ -28,20 +28,15 @@ El objetivo de esta práctica es realizar la construción de un cable UTP de par
 
 #### ***Material empleado***. <a name="id3"></a>
 
-- Crimpadora 
-<br>
+- Crimpadora
 ![](crimpadora1.jpg)
 - Tijeras
-<br>
 ![](tijeras.jpg)
 - Tester para Comprobar cables
-<br>
 ![](tester.jpg)
 - Cableado
-<br>
 ![](utp.jpg)
 - Pela Cables
-<br>
 ![](pela.jpg) 
 
 #### ***Desarrollo***. <a name="id4"></a>
@@ -57,6 +52,7 @@ Asi quedaria el cable una vez pelado y metido en el RJ45.
 <br>
 Y luego repetimos lo realizado anteriormente en el otro extremo del cable.
 <br>
+![](Cruzado3.jpg)
 **Cable Directo**
 <br>
 Hacemos el mismo proceso que con el cruzado, pelamos el cable, ordenamos en colores y cortamos para introducir los cables dentro de la boca.
