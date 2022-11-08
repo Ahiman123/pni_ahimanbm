@@ -80,10 +80,12 @@ Una vez dentro sellamos bien y listo ya estaria el lado hembra
 En el otro lado del cable hacemos un directo como realizamos anteriormente
 <br>
 ![](Hembra4.jpg)
-***IMPORTANTE:*** si estamos capturando una terminal no hace falta capturar todo el escritorio y es importante que se vea el nombre de usuario.
+<br>
 
-Si encontramos dificultades a la hora de realizar algún paso debemos explicar esas dificultades, que pasos hemos seguido para resolverla y los resultados obtenidos.
+**VIDEO:**
+<br>
+https://youtu.be/Gq8uUIBP0k0
+<br>
+#### ***Conclusion***. <a name="id5"></a>
+Nosotros pensabamos que los cables eran mas faciles de hacer y no sabiamos que tenian que ir con un patron de colores para que pudiese funcionar y gracias a esta practica le hemos dado la importancia necesaria a los cables lo que cuesta hacerlos y recojimos conocimientos sobre la paleta de colores que necesitas poner para realizar un cable cruzado o directo.
 
-#### ***Conclusiones***. <a name="id5"></a>
-
-En esta parte debemos exponer las conclusiones que sacamos del desarrollo de la prácica.
