@@ -1,7 +1,7 @@
 ## EJERCICICO 1
 1. Topologia de red
 
-![](/img/001.png)
+![](./img/001.png)
 
 2. Para monstrar todas las vlan del switch ejecutamos este comando
 
