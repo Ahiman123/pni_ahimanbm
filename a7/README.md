@@ -146,3 +146,37 @@ Comprobamos la Vlan 2
 
 Vemos que no funciona y es porque no estan los switch trunk
 
+Switch(config)#interface fastEthernet 0/4
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/4, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/4, changed state to up
+sw
+Switch(config-if)#switchport trunk allowed vlan 1,2,3
+
+Y ahora verificamos que se hayan aplicado los cambios:
+
+Switch#show interfaces fastEthernet 0/4 switchport 
+Name: Fa0/4
+Switchport: Enabled
+Administrative Mode: trunk
+Operational Mode: trunk
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: dot1q
+Negotiation of Trunking: On
+Access Mode VLAN: 1 (default)
+Trunking Native Mode VLAN: 1 (default)
+Voice VLAN: none
+Administrative private-vlan host-association: none
+Administrative private-vlan mapping: none
+Administrative private-vlan trunk native VLAN: none
+Administrative private-vlan trunk encapsulation: dot1q
+Administrative private-vlan trunk normal VLANs: none
+Administrative private-vlan trunk private VLANs: none
+Operational private-vlan: none
+Trunking VLANs Enabled: 1-3
+Pruning VLANs Enabled: 2-1001
+Capture Mode Disabled
+Capture VLANs Allowed: ALL
+Protected: false
