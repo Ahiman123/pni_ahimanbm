@@ -48,7 +48,7 @@ VLAN Name                             Status    Ports
 1005 trnet-default                    active
 
 Para realizar la siguiente configuracion:
-![](/img/002.png)
+![](./img/002.png)
 
 ahiman_sw(config)#interface fastEthernet 0/2
 ahiman_sw(config-if)#switchport access vlan 2
@@ -75,15 +75,15 @@ VLAN Name                             Status    Ports
 
 Comprobamos con pings que todo vaya bien
 
-![](/img/003.png)
+![](./img/003.png)
 
 ## EJERCICIO 2
 
 1. Creamos esta topología
 
-![](/img/004.png)
+![](./img/004.png)
 
-![](/img/005.png)
+![](./img/005.png)
 
 2. Insertamos la vlan 2 y vlan 3 en todos los switch
 
@@ -115,7 +115,7 @@ VLAN Name                             Status    Ports
 
 3. Realizar la siguiente configuración
 
-![](/img/006.png)
+![](./img/006.png)
 
 Switch(config)#interface fastEthernet 0/3
 Switch(config-if)#switchport access vlan 3
@@ -131,18 +131,18 @@ Building configuration...
 
 5. Conectamos los switch y ponemos en trocal esas salidas.
 
-![](/img/007.png)
+![](./img/007.png)
 
 Comprobar que las comunicaciones entre los swichs funcionan correctamente. ¿Es esto
 cierto? ¿Para qué VLAN funciona correctamente?
 
 Vemos que en la Vlan 1 si hay comunicacion, esto se debe a que es la Vlan por defecto
 
-![](/img/008.png)
+![](./img/008.png)
 
 Comprobamos la Vlan 2
 
-![](/img/009.png)
+![](./img/009.png)
 
 Vemos que no funciona y es porque no estan los switch trunk
 
