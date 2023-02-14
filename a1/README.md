@@ -108,7 +108,7 @@ c. Cifre todas las contraseñas de texto no cifrado.
 
 d. Texto del mensaje del día: Unauthorized access is strictly prohibited (El acceso no autorizado queda terminantemente prohibido).
 
-Ponemos banner mod # Escribimos aqui el mensaje del día #
+Ponemos banner motd # Escribimos aqui el mensaje del día #
 
 #### Paso 2: Verificar los parámetros iniciales del R1.
 
