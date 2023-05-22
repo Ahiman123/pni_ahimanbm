@@ -43,29 +43,49 @@ R5(config)#router rip
 + R1
 
  ~~~
+R1(config)#router rip
+R1(config-router)#network 192.168.2.0
+R1(config-router)#network 192.168.1.0
 R1(config-router)#
  ~~~
 
 + R2
 
  ~~~
+R2(config)#router rip 
+R2(config-router)#network 192.168.2.0
+R2(config-router)#network 192.168.3.0
+R2(config-router)#network 192.168.4.0
 R2(config-router)#
  ~~~
  
 +  R3
 
  ~~~
-
+R3(config)#router rip
+R3(config-router)#network 192.168.4.0
+R3(config-router)#network 192.168.6.0
+R3(config-router)#network 192.168.5.0
+R3(config-router)#
  ~~~
  
  + R4
  
  ~~~
+R4(config)#router rip 
+R4(config-router)#network 192.168.6.0
+R4(config-router)#network 192.168.7.0
+R4(config-router)#network 192.168.8.0
+R4(config-router)#
  ~~~
  
  + R5
  
  ~~~
+R5(config)#router rip
+R5(config-router)#network 192.168.8.0
+R5(config-router)#network 192.168.9.0
+R5(config-router)#
  ~~~
 
 5. Muestra la tabla de enrutamiento del router **R3** para verificar si ha "aprendido" las redes de sus vecinos.
@@ -73,6 +93,28 @@ R2(config-router)#
  + R3
  
  ~~~
+ R3#show ip route 
+Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+R    192.168.1.0/24 [120/2] via 192.168.4.1, 00:00:26, Serial3/0
+R    192.168.2.0/24 [120/1] via 192.168.4.1, 00:00:26, Serial3/0
+R    192.168.3.0/24 [120/1] via 192.168.4.1, 00:00:26, Serial3/0
+C    192.168.4.0/24 is directly connected, Serial3/0
+C    192.168.5.0/24 is directly connected, FastEthernet0/0
+C    192.168.6.0/24 is directly connected, Serial2/0
+R    192.168.7.0/24 [120/1] via 192.168.6.2, 00:00:16, Serial2/0
+R    192.168.8.0/24 [120/1] via 192.168.6.2, 00:00:16, Serial2/0
+R    192.168.9.0/24 [120/2] via 192.168.6.2, 00:00:07, Serial2/0
+
+R3#
  ~~~
 
  + Comprobar si la distancia a las redes se corresponde con la métrica. Considerando que en `RIP` la métrica es el número de saltos. Por ejemplo la red `192.168.8.0/24` debe tener métrica 2.
@@ -81,6 +123,7 @@ R2(config-router)#
  + R3
  
  ~~~
+ R    192.168.8.0/24 [120/1] via 192.168.6.2, 00:00:16, Serial2/0
  ~~~
 
 6. Activar el modo de depuración en el router R2.
@@ -88,6 +131,7 @@ R2(config-router)#
  + R2
  
  ~~~
+ 
  ~~~
 
 + ¿Cuáles son las rutas las rutas enviadas por R2 a R1?
