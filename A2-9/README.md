@@ -131,22 +131,71 @@ R3#
  + R2
  
  ~~~
- 
+ R2#RIP: received v1 update from 192.168.4.2 on Serial3/0
+      192.168.5.0 in 1 hops
+      192.168.6.0 in 1 hops
+      192.168.7.0 in 2 hops
+      192.168.8.0 in 2 hops
+      192.168.9.0 in 3 hops
+RIP: received v1 update from 192.168.2.1 on Serial2/0
+      192.168.1.0 in 1 hops
+RIP: sending  v1 update to 255.255.255.255 via FastEthernet0/0 (192.168.3.1)
+RIP: build update entries
+      network 192.168.1.0 metric 2
+      network 192.168.2.0 metric 1
+      network 192.168.4.0 metric 1
+      network 192.168.5.0 metric 2
+      network 192.168.6.0 metric 2
+      network 192.168.7.0 metric 3
+      network 192.168.8.0 metric 3
+      network 192.168.9.0 metric 4
+RIP: sending  v1 update to 255.255.255.255 via Serial2/0 (192.168.2.2)
+RIP: build update entries
+      network 192.168.3.0 metric 1
+      network 192.168.4.0 metric 1
+      network 192.168.5.0 metric 2
+      network 192.168.6.0 metric 2
+      network 192.168.7.0 metric 3
+      network 192.168.8.0 metric 3
+      network 192.168.9.0 metric 4
+RIP: sending  v1 update to 255.255.255.255 via Serial3/0 (192.168.4.1)
+RIP: build update entries
+      network 192.168.1.0 metric 2
+      network 192.168.2.0 metric 1
+      network 192.168.3.0 metric 1
+RIP: received v1 update from 192.168.4.2 on Serial3/0
+      192.168.5.0 in 1 hops
+      192.168.6.0 in 1 hops
+      192.168.7.0 in 2 hops
+      192.168.8.0 in 2 hops
+      192.168.9.0 in 3 hops
+RIP: received v1 update from 192.168.2.1 on Serial2/0
+      192.168.1.0 in 1 hops
  ~~~
 
 + ¿Cuáles son las rutas las rutas enviadas por R2 a R1?
 
 ~~~
+RIP: received v1 update from 192.168.2.1 on Serial2/0
+      192.168.1.0 in 1 hops
 ~~~
 
 + ¿Cuáles son las rutas las rutas recibidas en R2 por parte de R3?
 
 ~~~
+ R2#RIP: received v1 update from 192.168.4.2 on Serial3/0
+      192.168.5.0 in 1 hops
+      192.168.6.0 in 1 hops
+      192.168.7.0 in 2 hops
+      192.168.8.0 in 2 hops
+      192.168.9.0 in 3 hops
+RIP: received v1 update from 192.168.2.1 on Serial2/0
 ~~~
 
 + Razonar, analizando los apartados a y b, si funciona el horizonte dividido.
 
 ~~~
+Sí funciona correctamente porque esta dando los saltos correspondientes
 ~~~
 
 7. Como se observa en el esquema de red, por la parte de la red Ethernet no hay ningún router, por tanto, se quiere evitar que el router no mande tráfico `RIP` por esa interfaz, ¿Qué se debe de hacer?
@@ -154,6 +203,7 @@ R3#
  + R1
  
  ~~~
+ 
  ~~~
 
 + R2
@@ -178,29 +228,67 @@ R3#
 
 8. Usando `show ip protocolos` en el router R2 y contestar a las siguientes preguntas:
 
+~~~
+R2#show ip protocols 
+Routing Protocol is "rip"
+Sending updates every 30 seconds, next due in 23 seconds
+Invalid after 180 seconds, hold down 180, flushed after 240
+Outgoing update filter list for all interfaces is not set
+Incoming update filter list for all interfaces is not set
+Redistributing: rip
+Default version control: send version 1, receive any version
+  Interface             Send  Recv  Triggered RIP  Key-chain
+  FastEthernet0/0       12 1
+  Serial2/0             12 1
+  Serial3/0             12 1
+Automatic network summarization is in effect
+Maximum path: 4
+Routing for Networks:
+	192.168.2.0
+	192.168.3.0
+	192.168.4.0
+Passive Interface(s):
+Routing Information Sources:
+	Gateway         Distance      Last Update
+	192.168.2.1          120      00:00:07
+	192.168.4.2          120      00:00:14
+Distance: (default is 120)
+~~~
+
 + ¿ Qué versión se está enviando?
 
 ~~~
+Se esta utilizando la version 1
 ~~~
 
 + ¿ Qué versión se acepta?
 
 ~~~
+Se acpeta cualquier versión
 ~~~
 
 + ¿ Cada cuanto tiempo se envían las tablas de rutas ?
 
 ~~~
+Cada 12 segundos
 ~~~
 
 + ¿ Qué redes están siendo publicadas por el `RIP` ?
 
 ~~~
+Routing for Networks:
+	192.168.2.0
+	192.168.3.0
+	192.168.4.0
 ~~~
 
 + ¿ Qué vecinos le están mandando información de enrutamiento?
 
 ~~~
+Routing Information Sources:
+	Gateway         Distance      Last Update
+	192.168.2.1          120      00:00:07
+	192.168.4.2          120      00:00:14
 ~~~
 
 
